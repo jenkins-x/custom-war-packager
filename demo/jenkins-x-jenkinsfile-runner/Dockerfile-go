@@ -58,5 +58,3 @@ RUN go get github.com/golang/protobuf/proto && \
   go get -u github.com/micro/micro && \
   mv $GOPATH/bin/* /usr/local/ && \ 
   cp -r $GOPATH/src/* /usr/local/go/src    
-
-CMD ["go","version"]
