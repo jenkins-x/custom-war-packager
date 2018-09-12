@@ -1,0 +1,2 @@
+ARG BASE_TAG
+FROM jenkinsxio/jenkins-base:$BASE_TAG
