@@ -25,7 +25,8 @@ docker tag jenkins-experimental/cwp-jenkinsfile-runner-demo:latest jenkinsxio/cw
 
 docker build --build-arg JENKINS_BASE_TAG=$TAG -t $ORG/jenkins-base:$TAG -f Dockerfile-base .
 
-declare -a arr=("maven" "node" "go")
+declare -a arr=("maven" "javascript" "go" "gradle" "python" "scala" "rust")
+#declare -a arr=("csharp" "php" "ruby")
 
 ## now loop through the above array
 for i in "${arr[@]}"
