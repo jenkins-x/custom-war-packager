@@ -9,7 +9,7 @@ RUN \
   echo >> /root/.bashrc && \
   echo "export PATH=~/scala-$SCALA_VERSION/bin:$PATH" >> /root/.bashrc
 
-RUN curl -L -o sbt.deb http://dl.bintray.com/sbt/debian/sbt-${SBT_VERSION}.deb && \
+RUN curl -Lf -o sbt.deb http://dl.bintray.com/sbt/debian/sbt-${SBT_VERSION}.deb && \
     dpkg -i sbt.deb && \
     apt-get update && \
     apt-get install -y sbt
