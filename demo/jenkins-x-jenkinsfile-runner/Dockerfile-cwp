@@ -1,0 +1,8 @@
+ARG BASE_TAG
+FROM jenkinsxio/jenkins-base:$BASE_TAG
+
+RUN apt-get update && apt-get install -y \
+  default-jdk
+
+RUN mkdir -p /opt/cwp
+COPY custom-war-packager-cli-*-jar-with-dependencies.jar /opt/cwp/custom-war-packager.jar
